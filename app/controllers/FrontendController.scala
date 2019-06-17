@@ -13,7 +13,7 @@ import play.api.mvc._
   */
 @Singleton
 class FrontendController @Inject()(assets: Assets, errorHandler: HttpErrorHandler, config: Configuration, cc: ControllerComponents) extends AbstractController(cc) {
-
+//TODO
   def index: Action[AnyContent] = assets.at("index.html")
 
   def assetOrDefault(resource: String): Action[AnyContent] = if (resource.startsWith(config.get[String]("apiPrefix"))){
